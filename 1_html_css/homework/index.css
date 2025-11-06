@@ -1,0 +1,103 @@
+.vsc-head{
+    margin-right:50px;
+    color:white; 
+    font-size:20px;
+    font-weight:500;
+}
+
+.whole{
+    background-color: black;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    margin-right:0px;
+}
+
+.taskbar{
+    display:flex;
+    background-color: #0D1117;
+    height:80px;
+}
+
+.taskbar1{
+    display:flex;
+    background-color:#0D1117;
+    width:800px;
+    margin-left:200px;
+    align-items: center;
+}
+.taskbar-text1{
+    display: flex;
+    color:grey;
+    font-size:15px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-right:10px;
+    align-items: center;
+}
+
+.taskbar2{
+    display:flex;
+    background-color: #0D1117;
+    align-items: center;
+    margin-left: 400px;
+}
+
+.main-body{
+    display:flex;
+    justify-content:start;
+    align-items:center;
+    flex-direction:column;
+    margin-top:50px;
+    margin-bottom:50px;
+    margin-left:150px;
+    margin-right:150px;
+    background-color: black;
+    width:1600px;
+    height:800px;
+}
+
+.big-text{
+    display:flex;
+    justify-content:center;
+    color:white;
+    font-size:60px;
+    font-weight:600;
+    margin-top:20px;
+}
+
+.all-container{
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius:20px;
+}
+
+.two-container{
+    display:flex;
+    align-items: center;
+}
+
+.button-container{
+    display:flex;
+    align-items:center;
+    border-radius:10px;
+    width:250px;
+    height:50px;
+    margin-top:20px;
+    margin-left:15px;
+    margin-right:15px;
+    margin-bottom:15px;
+    font-size:18px;
+    font-weight: 500;
+}
+
+.text-container{
+    display:flex;
+    font-size:10px;
+    font-size:15px;
+    color:white;
+    justify-content:center;
+    text-align:center;
+    margin-bottom:15px;
+}

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>To Do List</title>
+    </head>
+    <body style="background-color:black; color:white;">
+        <div>
+            <h1><b>Todo List</b></h1>
+        </div>
+        </br>
+        <div class="all-todo">
+            
+        </div>
+        <input type="text">
+        <button onclick="addToDo()">Add Todo</button>
+    </body>
+    <script>
+        let todos=[];
+        function addToDo(){
+            todos.push(
+                {
+                    id:todos.length,
+                    title:document.querySelector("input").value
+                }
+            );
+            render();
+        }
+        function deleteToDo(num){
+            todos.splice(num,1);
+            for(let i=num;i<todos.length;i++){
+                todos[i].id--;
+            }
+            render();
+        }
+        function createToDoComponent(todo){
+            let comp=document.createElement("div");
+            comp.className=`todo-${todo.id}`;
+            comp.innerHTML=`<span style="margin-right:15px">${todo.id+1}. ${todo.title}</span> <button onclick="deleteToDo(${todo.id})">Delete</button>`;
+            return comp;
+        }
+        function render(){
+            let len=todos.length;
+            let parent=document.querySelector(".all-todo");
+            parent.innerHTML="";
+            for(let i=0;i<len;i++){
+                let comp=createToDoComponent(todos[i]);
+                parent.appendChild(comp);
+            }
+        }
+        render();
+    </script>
+</html>

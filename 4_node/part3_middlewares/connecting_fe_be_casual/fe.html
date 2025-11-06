@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Website</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <div class="a">
+            Enter a:
+            <input class="value-a">
+            </br>
+            Enter b:
+            <input class="value-b">
+            </br>
+            <button onclick="clicking()">Enter</button>
+            <div class="answer">sum: ??</div>
+        </div>
+    </div>
+</body>
+<script>
+    let a=0;
+    let b=0;
+    let actual_ans={};
+    async function clicking(){
+        a=parseInt(document.querySelector(".value-a").value);
+        b=parseInt(document.querySelector(".value-b").value);
+        let ans=await fetch(`http://localhost:3000/sum?a=${a}&b=${b}`);
+        actual_ans=await ans.json();
+        console.log(document.querySelector(".answer").innerHTML);
+        document.querySelector(".answer").innerHTML=`sum: ${actual_ans.answer}`;
+        console.log(document.querySelector(".answer").innerHTML);
+    }
+</script>
+</html>
