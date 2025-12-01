@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<style>
+    .whole{
+        display:flex;
+        background-color:rgb(51, 255, 0);
+        border-radius:20px;
+        color:rgb(1, 40, 40);
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        width:600px;
+        height:300px;
+        margin:100px;
+    }
+    .line{
+        margin:10px;
+    }
+    .buttons{
+        display: flex;
+        flex-direction:row;
+    }
+    .upper{
+        display:flex;
+        align-content: center;
+        justify-content: center;
+        color:rgb(6, 6, 0)
+    }
+    .error{
+        display:flex;
+        align-content: center;
+        justify-content: center;
+    }
+</style>
+<body style="background-color:rgba(0, 0, 0, 0.833);color:rgba(255, 255, 255, 0.219);display:flex;justify-content:center;align-items:center;">
+    <div>
+        <div class="upper">
+            <h1>SIGN UP</h1>
+        </div>
+        <div class="whole">
+            <div class="line">
+                Name:<input class="box1" placeholder="name..">
+            </div>
+            <div class="line">
+                Username:<input class="box2" placeholder="username..">
+            </div>
+            <div class="line">
+                Password:<input class="box3" placeholder="password..">
+            </div>
+            <div class="buttons">
+                <button style="margin-right:10px" onclick="submited_sign_up(document.querySelector('.box1').value,document.querySelector('.box2').value,document.querySelector('.box3').value)">Sign Up</button>
+                <button style="margin-left:10px" onclick="signInClick()">Sign In Instead</button>
+            </div>
+            <div class="error"></div>
+        </div>
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/sign.js"></script>
+</html>

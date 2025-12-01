@@ -1,4 +1,5 @@
 const mongoose=require("mongoose");
+
 mongoose.connect("mongodb+srv://collegestudent4278:4VPOpKePXJ5t4eAl@cluster0.jnjkk.mongodb.net/todo_db");
 const ObjectId=mongoose.ObjectId;
 const Schema=mongoose.Schema;
@@ -10,7 +11,7 @@ todos:description,userID,done
 
 let user=new Schema({
             name:String,
-            email:{type:String,unique:true},
+            username:{type:String,unique:true},
             password:String
 })
 
@@ -23,7 +24,7 @@ let todo=new Schema({
 let userModel=mongoose.model('users',user);
 let todoModel=mongoose.model('todos',todo);
 
-model.export({
+module.exports={
     userModel:userModel,
     todoModel:todoModel
-})
+};
