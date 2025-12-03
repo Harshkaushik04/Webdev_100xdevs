@@ -6,6 +6,7 @@ import Login from './Login'
 import SignUp from './SignUp'
 import Note from './Note'
 import ErrorPage from './ErrorPage'
+import ViewNote from './ViewNote'
 
 function App() {
   return(
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/note" element={<Note/>}/>
+          <Route path="/view-note" element={<ViewNote/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </BrowserRouter>
